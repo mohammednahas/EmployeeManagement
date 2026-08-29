@@ -1,5 +1,5 @@
 using EmployeeManagement.Application.DTOs.Departments;
-
+//mohammed nahas
 namespace EmployeeManagement.Application.Interfaces;
 
 public interface IDepartmentService
