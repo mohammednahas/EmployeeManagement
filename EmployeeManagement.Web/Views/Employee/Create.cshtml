@@ -1,0 +1,40 @@
+@model EmployeeManagement.Application.DTOs.Employees.CreateEmployeeDto
+
+<h1>Create Employee</h1>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Salary"></label>
+        <input asp-for="Salary" />
+        <span asp-validation-for="Salary"></span>
+    </div>
+
+    <div>
+        <label asp-for="DepartmentId">Department</label>
+
+        <select asp-for="DepartmentId"
+                asp-items="ViewBag.Departments">
+
+            <option value="">-- Select Department --</option>
+
+        </select>
+
+        <span asp-validation-for="DepartmentId"></span>
+    </div>
+
+    <button type="submit">
+        Create
+    </button>
+
+</form>
+
+<a asp-action="Index">
+    Back to Employees
+</a>

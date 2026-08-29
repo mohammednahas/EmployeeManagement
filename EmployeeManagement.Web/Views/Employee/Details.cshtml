@@ -1,0 +1,27 @@
+@model EmployeeManagement.Application.DTOs.Employees.EmployeeDto
+
+<h1>Employee Details</h1>
+
+<div>
+    <strong>Id:</strong>
+    @Model.EmployeeId
+</div>
+
+<div>
+    <strong>Name:</strong>
+    @Model.Name
+</div>
+
+<div>
+    <strong>Salary:</strong>
+    @Model.Salary
+</div>
+
+<div>
+    <strong>Department:</strong>
+    @Model.DepartmentName
+</div>
+
+<a asp-action="Index">
+    Back
+</a>

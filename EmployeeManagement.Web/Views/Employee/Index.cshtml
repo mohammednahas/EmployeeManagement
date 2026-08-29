@@ -1,0 +1,51 @@
+@model List<EmployeeManagement.Application.DTOs.Employees.EmployeeDto>
+
+<h1>Employees</h1>
+
+<a asp-action="Create">Create Employee</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.EmployeeId</td>
+                <td>@employee.Name</td>
+                <td>@employee.Salary</td>
+                <td>@employee.DepartmentName</td>
+
+                <td>
+                    <a asp-action="Details"
+                       asp-route-id="@employee.EmployeeId">
+                        Details
+                    </a>
+
+                    <a asp-action="Edit"
+                       asp-route-id="@employee.EmployeeId">
+                        Edit
+                    </a>
+
+                    <a asp-action="Delete"
+                       asp-route-id="@employee.EmployeeId">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Department"
+   asp-action="Index">
+    Departments
+</a>
