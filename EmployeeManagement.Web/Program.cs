@@ -14,6 +14,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IApplicationDbContext>(
     provider => provider.GetRequiredService<AppDbContext>());
 
+
+
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 var app = builder.Build();
 
 
