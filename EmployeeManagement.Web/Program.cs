@@ -16,7 +16,7 @@ builder.Services.AddScoped<IApplicationDbContext>(
 
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 
-builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+
 var app = builder.Build();
 
 
